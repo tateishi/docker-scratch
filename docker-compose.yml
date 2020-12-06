@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  default:
+    build:
+      context: ./scratch
+    tty: true
+    stdin_open: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/home/ubuntu/.Xauthority
+    network_mode: "host"
+    environment:
+      DISPLAY: ${DISPLAY}
