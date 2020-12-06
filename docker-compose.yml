@@ -10,6 +10,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ~/.Xauthority:/home/ubuntu/.Xauthority
+      - ./files/scratch:/usr/bin/scratch
     network_mode: "host"
     environment:
       DISPLAY: ${DISPLAY}
