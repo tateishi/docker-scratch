@@ -4,6 +4,8 @@ services:
   default:
     build:
       context: ./scratch
+      args:
+        PROXY: ${PROXY}
     tty: true
     stdin_open: true
     volumes:

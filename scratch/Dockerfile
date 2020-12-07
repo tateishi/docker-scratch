@@ -1,5 +1,9 @@
 FROM ubuntu:20.04
 
+ARG PROXY
+ENV HTTP_PROXY=${PROXY}
+ENV HTTPS_PROXY=${PROXY}
+
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y \
